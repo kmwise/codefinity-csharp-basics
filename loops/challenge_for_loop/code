@@ -1,0 +1,28 @@
+using System;
+
+namespace ConsoleApp
+{
+    public class Program
+    {
+        public static int CalculateTotalCost(int itemPrice, int quantity)
+        {
+            int totalCost = 0;
+
+            for (int i = 0; i < quantity; i++)
+            {
+                totalCost = totalCost + itemPrice;
+            }
+
+            return totalCost;
+        }
+
+        public static void Main(string[] args)
+        {
+            int price = 100;
+            int count = 3;
+
+            int result = CalculateTotalCost(price, count);
+            Console.WriteLine("Total cost: " + result);
+        }
+    }
+}
